@@ -35,7 +35,7 @@ model.fit(X_train_features, Y_train)
 # Streamlit app interface
 st.header("Spam Email Detection")
 
-uploaded_file = st.file_uploader(mail_data (1).csv")
+uploaded_file = st.file_uploader("mail_data (1).csv")
 if uploaded_file is not None:
     raw_mail_data = pd.read_csv(uploaded_file)
     st.write(raw_mail_data.head())
