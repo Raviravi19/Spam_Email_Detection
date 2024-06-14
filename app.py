@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 # Load the data
-raw_mail_data = pd.read_csv('r:\\Users\\ravi shankar\\OneDrive\\Documents\\Spam_Email_Detection\\mail_data (1).csv')
+raw_mail_data = pd.read_csv('mail_data (1).csv')
 
 # Preprocess the data
 mail_data = raw_mail_data.where((pd.notnull(raw_mail_data)), '')
@@ -35,7 +35,7 @@ model.fit(X_train_features, Y_train)
 # Streamlit app interface
 st.header("Spam Email Detection")
 
-uploaded_file = st.file_uploader("r:\\Users\\ravi shankar\\OneDrive\\Documents\\Spam_Email_Detection\\mail_data (1).csv")
+uploaded_file = st.file_uploader(mail_data (1).csv")
 if uploaded_file is not None:
     raw_mail_data = pd.read_csv(uploaded_file)
     st.write(raw_mail_data.head())
