@@ -35,12 +35,12 @@ model.fit(X_train_features, Y_train)
 # Streamlit app interface
 st.header("Spam Email Detection")
 
-uploaded_file = st.file_uploader("mail_data (1).csv")
-if uploaded_file is not None:
-    raw_mail_data = pd.read_csv(uploaded_file)
-    st.write(raw_mail_data.head())
-else:
-    st.error("Please upload the CSV file.")
+# uploaded_file = st.file_uploader("mail_data (1).csv")
+# if uploaded_file is not None:
+#     raw_mail_data = pd.read_csv(uploaded_file)
+#     st.write(raw_mail_data.head())
+# else:
+#     st.error("Please upload the CSV file.")
 
 # Input text box for the user to enter an email message
 input_mail = st.text_area("Enter the email message:")
